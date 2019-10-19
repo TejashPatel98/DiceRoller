@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     {
         TextView ntv = this.findViewById(R.id.numberTextView);
         TextView itv = this.findViewById(R.id.InputBox);
-
+        TextView ptv = this.findViewById(R.id.PointsTextView);
         Random ran = new Random();
         int ran_int = ran.nextInt(6);
 
@@ -71,6 +71,13 @@ public class MainActivity extends AppCompatActivity {
         if(ran_int == (Integer.valueOf(InputtedNum)))
         {
             ctv.setText("Congratulations!");
+            String str_ptv = ptv.getText().toString();
+            int num_ptv = Integer.valueOf(str_ptv);
+
+            num_ptv += 1;
+            str_ptv = Integer.toString(num_ptv);
+
+            ptv.setText(str_ptv);
         }
         else
         {
