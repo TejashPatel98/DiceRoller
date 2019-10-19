@@ -57,12 +57,26 @@ public class MainActivity extends AppCompatActivity {
     }
     public void on_button_click(View view)
     {
-        TextView tv = this.findViewById(R.id.numberTextView);
+        TextView ntv = this.findViewById(R.id.numberTextView);
+        TextView itv = this.findViewById(R.id.InputBox);
 
         Random ran = new Random();
         int ran_int = ran.nextInt(6);
 
-        tv.setText(Integer.toString(ran_int));
+        ntv.setText(Integer.toString(ran_int));
+
+        String InputtedNum = itv.getText().toString();
+        TextView ctv = this.findViewById(R.id.CongratTextView);
+
+        if(ran_int == (Integer.valueOf(InputtedNum)))
+        {
+            ctv.setText("Congratulations!");
+        }
+        else
+        {
+            ctv.setText("");
+        }
 
     }
+
 }

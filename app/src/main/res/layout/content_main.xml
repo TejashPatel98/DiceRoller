@@ -23,12 +23,41 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="137dp"
+        android:layout_height="71dp"
         android:onClick="on_button_click"
         android:text="Roll"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberTextView" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/InputBox"
+        android:layout_width="223dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="60dp"
+        android:hint="Enter between 1 to 6"
+        app:layout_constraintBottom_toTopOf="@+id/numberTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintVertical_bias="0.703" />
+
+    <TextView
+        android:id="@+id/CongratTextView"
+        android:layout_width="247dp"
+        android:layout_height="53dp"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numberTextView" />
